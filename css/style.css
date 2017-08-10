@@ -1,0 +1,65 @@
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+h1 {
+   text-align: center;
+}
+
+div.checkers {
+   width: 1000px;
+   height: 1000px;
+   margin: 0 auto;
+}
+
+
+
+
+ul {
+   padding-left: 0;
+   font-size: 0;
+   width: 100%;
+   height: 12.5%;
+   white-space: nowrap;
+}
+
+li {
+   position: relative;
+   list-style: none;
+   display: inline-block;
+   width: 12.5%;
+   font-size: 16px;
+   height: 100%;
+   border: 1px solid black;
+}
+ul:nth-child(odd) li:nth-child(odd) {
+	background-color: black;
+}
+ul:nth-child(even) li:nth-child(even) {
+	background-color: black;
+}
+ul.pl1:nth-child(odd) li:nth-child(odd)::after,
+ul.pl1:nth-child(2) li:nth-child(even)::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color:  darkred;
+    top: 10%;
+    left: 10%;
+    border-radius: 50%;
+}
+
+
+ul.pl2:nth-last-child(odd) li:nth-child(even)::after,
+ul.pl2:nth-last-child(2) li:nth-child(odd)::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    top: 10%;
+    left: 10%;
+    border-radius: 50%;
+} 
